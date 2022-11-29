@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
-const URI = "http://localhost:8000/notes/";
+const URI = "https://l5qwl7rlk3.execute-api.us-east-1.amazonaws.com/notes/";
 
 const Modal = styled.div`
     width: 40%;

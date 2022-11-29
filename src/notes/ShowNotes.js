@@ -6,7 +6,7 @@ import img from '../assets/notes.svg';
 import { HiOutlinePlus, HiOutlineCog, HiChevronRight } from 'react-icons/hi';
 import Modal from "../components/Modal";
 
-const URI = "http://localhost:8000/notes/";
+const URI = "https://l5qwl7rlk3.execute-api.us-east-1.amazonaws.com/notes/";
 
 const Main = styled.section`
     position: relative;

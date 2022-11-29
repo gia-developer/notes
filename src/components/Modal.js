@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { HiOutlinePencil } from 'react-icons/hi';
 
-const URI = "http://localhost:8000/notes/";
-
 const Open = styled.div`
     background: white;
     padding: 1em;
