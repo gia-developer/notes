@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <h1>Cartitas de amó</h1>
-      <BrowserRouter>
+      <BrowserRouter basename="/notes">
         <Routes>
           <Route path="/" element={<ShowNotes />} />
           <Route path="/create" element={<CreateNote />} />
