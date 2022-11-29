@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
     color: #F28A2E;
   }
 
+  .text--blue {
+    color: #1F98A6;
+  }
+
   h1, h2, p, a, span {
     line-height: 150%;
   }

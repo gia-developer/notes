@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import img from '../assets/notes.svg';
-import { HiOutlinePlus, HiOutlineCog } from 'react-icons/hi';
+import { HiOutlinePlus, HiOutlineCog, HiChevronRight } from 'react-icons/hi';
 import Modal from "../components/Modal";
 
 const URI = "http://localhost:8000/notes/";
@@ -38,6 +38,19 @@ const Li = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    a.text--blue {
+        margin-top: 1em;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+`;
+
+const Icon = styled.div`
     cursor: pointer;
 `;
 
@@ -131,10 +144,10 @@ const ShowNotes = () => {
                                     <div>
                                         <Title>
                                             <h3>{note.title}</h3>
-                                            <div>
+                                            <Icon>
                                                 <HiOutlineCog size={22} color="rgba(0, 0, 0, 0.5)" onClick={() => {setOpenModal(note.id); setIsOpen(!isOpen)}} />
                                                 {isOpen && openModal === note.id ? <Modal id={note.id} /> : ""}
-                                            </div>
+                                            </Icon>
                                         </Title>
                                         <Text>{note.content}</Text>
                                     </div>
@@ -142,6 +155,7 @@ const ShowNotes = () => {
                                         <span className="text--grey">{note.createdAt}</span>
                                         <span className="text--orange">{note.createdBy}</span>
                                     </Created>
+                                    <Link to={`note/${note.id}`} className="text--blue">Ver nota <HiChevronRight size={18} /></Link>
                                 </Li>
                             ))}
                         </Ul>
