@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import styled from 'styled-components';
 
-const URI = "https://l5qwl7rlk3.execute-api.us-east-1.amazonaws.com/notes/";
+const URI = "http://localhost:8000/notes/";
 
 const Section = styled.section`
     width: 40%;
